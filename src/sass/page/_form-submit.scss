@@ -1,0 +1,33 @@
+@use "global" as *;
+
+.form-submit input {
+    padding: prem(13) prem(146);
+    color: $white;
+    display: inline-block;
+    font-size: prem(16);
+    font-weight: $bold;
+    line-height: 1;
+    background-color: $red;
+    background-image: none;
+    border: none;
+    border-radius: prem(5);
+    text-decoration: none;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.form-submit input:hover,
+.form-submit input:focus {
+    outline: none;
+}
+
+.form-submit input:hover {
+    background-color: $white;
+    border: prem(1) solid $red;
+    color: $red;
+}
+
+.form-submit input::-moz-foucus-inner {
+    padding: 0;
+    border: none;
+}

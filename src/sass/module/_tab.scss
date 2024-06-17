@@ -1,0 +1,409 @@
+@use "global" as *;
+
+.tab__menu {
+    display: flex;
+    justify-content: center;
+}
+
+.tab__menu-item {
+    padding: prem(15) 0 prem(15.9) 0;
+    font-size: prem(12);
+    width: 33%;
+    line-height: 1;
+    border-top: prem(1) solid $gray;
+    border-left: prem(1) solid $gray;
+    border-right: prem(1) solid $gray;
+    background-color: #E6E6E6;
+    text-align: center;
+    color: $deep-gray;
+    cursor: pointer;
+    border-radius: prem(5) prem(5) 0 0;
+    position: relative;
+    @include mq(md) {
+        font-size: prem(16);
+        min-width: prem(181.84);
+        width: fit-content;
+    }
+}
+
+.tab__menu-item:before {
+    content: '';
+    position: absolute;
+    background-color: $gray;
+    width:prem(7.2);
+    height: prem(1);
+    bottom: 0;
+    left: prem(-7.2);
+}
+
+.tab__menu-item:first-child {
+    &::before {
+        display: none;
+    }
+}
+
+.tab__menu-item + .tab__menu-item {
+    margin-left: prem(7.2);
+}
+
+.tab__menu-item.is-active {
+    color: $black;
+    background-color: $white;
+    border-radius: prem(5) prem(5) 0 0;
+}
+
+.tab__content {
+    padding:prem(17) prem(22.5) prem(25) prem(22.5);
+    border-left: prem(1) solid $gray;
+    border-right: prem(1) solid $gray;
+    border-bottom: prem(1) solid $gray;
+    border-radius: 0 0 prem(5) prem(5);
+}
+
+.tab__content-item {
+    display: none;
+}
+
+.tab__content-item.is-active {
+    display: block;
+    animation: fade .3s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.tab__content-map-search {
+    position: relative;
+    cursor: pointer;
+    text-decoration: underline;
+    @include mq(md) {
+        max-width: fit-content;
+        margin-left: auto;
+        padding-right: prem(22.1);
+        margin-top: prem(10);
+        font-size: prem(14);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right:0;
+        background-image: url(../images/common/angle_right_bk.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width:prem(10);
+        height: prem(10);
+    }
+}
+
+.tab__content-map-search__result {
+    font-size: prem(13);
+    color: $light-black;
+    margin-top: prem(13);
+}
+
+.tab__content-map-result__items {
+    margin-top: prem(20);
+    padding-left: prem(16);
+}
+
+.tab__content-map-result__item {
+    position: relative;
+    @include mq(md) {
+        display: flex;
+        align-items: center;
+        gap:0 prem(30);
+    }
+}
+
+.tab__content-map-result__icon {
+    position: absolute;
+    top: prem(13);
+    left:prem(-18);
+    width:prem(15.55);
+    @include mq(md) {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.tab__content-map-result__item:nth-child(n+2) {
+    margin-top: prem(23);
+}
+
+.tab__content-map-result__item p {
+    @include mq(md) {
+        min-width:prem(230);
+    }
+}
+
+.tab__content-map-result__item.selected {
+    display: flex;
+    align-items: center;
+    flex-wrap:wrap;
+    @include mq(md) {
+        flex-wrap: initial;
+    }
+}
+
+.tab__content-map-result__item .selected {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:$red;
+    width: 100%;
+    span {
+        color: $black;
+        text-decoration: underline;
+        display: block;
+        cursor: pointer;
+    }
+}
+
+.tab__content-map-result__item .imported {
+    font-size: prem(11);
+    color: $white;
+    font-weight: $medium;
+    border-radius: prem(3);
+    background-color: $deep-gray;
+    margin-left: prem(18);
+    padding:prem(4);
+}
+
+.tab__content-map-result__add {
+    font-size: prem(13);
+    text-align: center;
+    padding:prem(4.5) prem(11.5);
+    border-radius: prem(3);
+    background-color: $light-gray;
+    border: prem(1) solid $gray;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: prem(10);
+    @include mq(md) {
+        margin-top: initial;
+    }
+}
+
+.tab__content-item__address .address {
+    display: flex;
+    align-items: center;
+    gap:prem(10);
+    flex-wrap: wrap;
+    @include mq(md) {
+        gap:prem(20);
+    }
+}
+
+.tab__content-item__address .address .number {
+    min-width:prem(112)
+}
+
+.tab__content-item__address .address p {
+    color: $gray;
+    font-size: prem(16);
+    input {
+        max-width: prem(66);
+        width: 100%;
+        border: prem(1) solid $gray;
+        padding:prem(6.5) prem(5);
+        margin-right: prem(11);
+        border-radius: prem(3);
+        &:focus {
+            border: prem(1.5) solid $red;
+        }
+    }
+
+    input:last-child {
+        max-width: prem(146);
+        width: 100%;
+        position: relative;
+        margin-left: prem(11);
+        margin-right: initial;
+    }
+}
+
+.tab__content-item__address .address:last-child {
+    margin-top: prem(16);
+}
+
+.tab__content-item__address .address:last-child p {
+    max-width: prem(244);
+    width: 100%;
+    input {
+        max-width: 100%;
+        width: 100%;
+        margin-left: initial;
+    }
+}
+
+.tab__content-item__address .search {
+    font-size: prem(16);
+    text-align: center;
+    padding:prem(4.5) prem(11.5);
+    border-radius: prem(3);
+    background-color: $light-gray;
+    border: prem(1) solid $gray;
+    cursor: pointer;
+}
+
+.tab__content-map-search__prefecture {
+    margin-top: prem(20);
+    font-size: prem(14);
+    color: $light-black;
+}
+
+.tab__content-map-search__prefecture-lists {
+    border-bottom: prem(1) solid $gray;
+    padding-bottom: prem(20);
+}
+
+.tab__content-map-search__prefecture-list {
+    margin-top: prem(15);
+    span {
+        font-size: prem(14);
+        &:nth-child(2) {
+            margin-left: prem(25);
+        }
+        &:nth-child(n+2) {
+            color: $blue;
+            text-decoration: underline;
+            cursor: pointer;
+            margin-left: prem(20);
+        }
+    }
+}
+
+.tab__content-item__wrap:nth-child(n+2) {
+    margin-top: prem(23);
+}
+
+.tab__content-item__label {
+    font-size: prem(16);
+}
+
+.tab__content-item__label span {
+    margin-left: prem(11);
+    padding: prem(4) prem(6) prem(5) prem(6);
+    display: inline-block;
+    font-size: prem(12);
+    font-weight: $medium;
+    color: $light-red;
+    background-color: $pink;
+    border: prem(1) solid $light-red;
+    border-radius: prem(3);
+}
+
+.tab__content-item__input input {
+    border:prem(1) solid $gray;
+    padding:prem(10);
+    border-radius: prem(5);
+    margin-top: prem(10);
+    width: 100%;
+    &:focus {
+        border: prem(1.5) solid $red;
+    }
+}
+
+.tab__content-item__info {
+    font-size: prem(14);
+    color: $light-black;
+    margin-top: prem(20);
+}
+
+.tab__content-map {
+    position: relative;
+}
+
+.tab__content-map-hukidashi {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: prem(10);
+}
+
+.tab__content-map-hukidashi-wrap {
+    max-width:prem(120);
+    padding:prem(5);
+    font-size:prem(10);
+    max-height: prem(100);
+    overflow-y:scroll;
+    position:relative;
+    background-color:$white;
+    text-align:left;
+    color:$black;
+    border: prem(2) solid $red;
+    border-radius:prem(5);
+    @include mq(md) {
+        font-size:prem(14);
+        max-width:prem(227);
+        max-height:prem(150);
+        padding:prem(10) prem(13) prem(17) prem(13);
+        overflow-y:initial;
+    }
+}
+
+.tab__content-map-hukidashi-icon {
+    max-width: prem(15);
+}
+
+.tab__content-map-hukidashi-wrap p {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    color: $red;
+    font-weight: $medium;
+    font-size:prem(10);
+    @include mq(md) {
+        justify-content: space-between;
+        font-size:prem(14);
+        flex-wrap: initial;
+    }
+}
+
+.tab__content-map-hukidashi-wrap p .imported {
+    font-size: prem(11);
+    color: $white;
+    font-weight: $medium;
+    border-radius: prem(3);
+    background-color: $deep-gray;
+    padding:prem(4);
+}
+
+.tab__content-map-hukidashi-text {
+    font-size: prem(14);
+    font-weight: $regular;
+    line-height: calc(18/14);
+    padding-top: prem(10);
+}
+
+.tab__content-map-hukidashi-wrap .tab__content-map-result__add {
+    margin-top: prem(10);
+    display: block;
+    max-width: prem(80);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tab__content-map-hukidashi-wrap:after{
+    @include mq(md) {
+        content:'';
+        background-image: url(../images/common/hukidashi-tryangle.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: prem(30);
+        height:prem(30);
+        position: absolute;
+        bottom: prem(-25.5);
+        left:prem(28);
+    }
+}

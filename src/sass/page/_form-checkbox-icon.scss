@@ -1,0 +1,107 @@
+@use "global" as *;
+
+.form-checkbox-icon__items {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: prem(10);
+    row-gap: prem(30);
+    @include mq(md) {
+        display: flex;
+        flex-wrap:wrap;
+        column-gap:0;
+        row-gap: 0;
+        gap:prem(9) prem(7);
+    }
+}
+
+.form-checkbox-icon__item {
+    @include mq(md) {
+        max-width: prem(182);
+        width: 100%;
+        min-height:prem(240);
+    }
+}
+
+.form-checkbox-icon label {
+    padding:prem(47) 0 prem(19) 0;
+    border: prem(1) solid $gray;
+    border-radius: prem(5);
+    cursor: pointer;
+    display: block;
+    position: relative;
+    height: 100%;
+}
+
+.form-checkbox-icon input {
+    display: none;
+}
+
+.form-check-icon__img {
+    max-width: prem(90);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    @include mq(md) {
+        max-width: prem(135);
+    }
+}
+
+.form-checkbox-icon span {
+    position: relative;
+    margin-top: prem(14);
+    display: block;
+    text-align: center;
+    font-size: prem(12);
+    line-height: 1.5;
+    @include mq(md) {
+        font-size: prem(14);
+        white-space: nowrap;
+    }
+}
+
+.form-checkbox-icon label::before {
+    content: "";
+    position: absolute;
+    top: prem(9);
+    left: prem(9);
+    border: prem(1) solid #ccc;
+    display: block;
+    width: prem(26);
+    height: prem(26);
+    border-radius: prem(3);
+    z-index:10;
+}
+
+.form-checkbox-icon label::after {
+    content: "";
+    position: absolute;
+    top: prem(15);
+    left: prem(15);
+    transform: rotate(-45deg);
+    display: block;
+    width: prem(15);
+    height: prem(9);
+    border-bottom: prem(3) solid $white;
+    border-left: prem(3) solid $white;
+    transition:  .3s;
+    opacity: 0;
+    border-radius: prem(3);
+}
+
+.form-checkbox-icon input:checked + label::before {
+    background-color: $red;
+}
+
+.form-checkbox-icon input:checked + label::after {
+    opacity: 1;
+    z-index:11;
+}
+
+.form__input
+.form-checkbox-icon__text {
+    font-size: prem(14);
+    color: $blue;
+    text-decoration: underline;
+    margin-top: prem(27);
+    cursor: pointer;
+}

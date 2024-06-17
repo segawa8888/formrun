@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+  <!-- meta情報 -->
+  <title>保証のお問い合わせ｜プレミアグループ</title>
+  <meta name="description" content=プレミアワランティサービスの保証に関するお問い合わせページです。保証のお申し込みから保証修理までこちらのフォームからお問い合わせいただけます。" />
+  <meta name="keywords" content="" />
+  <!-- ogp -->
+  <meta property="og:title" content="保証のお問い合わせ｜プレミアグループ" />
+  <meta property="og:type" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="../images/common/ogp.jpg" />
+  <meta property="og:site_name" content="" />
+  <meta property="og:description" content="プレミアワランティサービスの保証に関するお問い合わせページです。保証のお申し込みから保証修理までこちらのフォームからお問い合わせいただけます。" />
+  <!-- ファビコン -->
+  <link rel="icon" href="../favicon.ico">
+  <!-- css -->
+  <link rel="stylesheet" href="../css/styles.css">
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+  <!-- JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script defer src="../js/script.js"></script>
+</head>
+<body>
+
+<header class="header">
+  <div class="header__inner">
+    <h1 class="header__logo">
+      <img src='../images/common/logo.png' alt='Premium' width='' height='' loading='lazy'>
+    </h1>
+  </div>
+</header>
+
+<main class="main">
+  <div class="container">
+    <div class="inner">
+      <h2 class="page-title">修理受付フォーム</h2>
+      <p class="page-text">こちらはプレミアワランティサービスの保証にご加入いただいているお車が<br>故障した際の修理申請フォームとなります。</p>
+
+      <div class="form__wrapper">
+        <div class="form__inner">
+          <form class="form" action="">
+            <div class="form__content">
+              <p class="form__title">お客様情報</p>
+              <dl class="form__wrap">
+                <dt class="form__label">契約者<span>必須</span></dt>
+                <dd class="form__input form-input">
+                  <div class="form__input-name">
+                    <label for="last_name">姓
+                      <input type="text" id="family_name" placeholder="山田">
+                    </label>
+                    <label for="first_name">名
+                      <input type="text" id="first_name" placeholder="太郎">
+                    </label>
+                  </div>
+                </dd>
+              </dl>
+              <dl class="form__wrap">
+                <dt class="form__label">契約者（フリガナ）<span>必須</span></dt>
+                <dd class="form__input form-input">
+                  <div class="form__input-name">
+                    <label for="last_name">セイ
+                      <input type="text" id="family_name_kana" placeholder="ヤマダ">
+                    </label>
+                    <label for="first_name">メイ
+                      <input type="text" id="first_name_kana" placeholder="タロウ">
+                    </label>
+                  </div>
+                </dd>
+              </dl>
+              <dl class="form__wrap">
+                <dt class="form__label">申請者<span>必須</span></dt>
+                <dd class="form__select form-select form__input">
+                  <select id="formChange02" onchange="viewChange2();">
+                    <option hidden>選択してください</option>
+                    <option value="me">契約者</option>
+                    <option value="family">契約者家族</option>
+                    <option value="shop">販売店</option>
+                    <option value="factory">修理工場</option>
+                    <option value="other">その他</option>
+                  </select>
+                </dd>
+                <div class="form__wrap-box">
+                  <dl id="form_me" class="form__wrap" style="display: none;">
+                    <dt class="form__label">当社からの連絡方法（ご希望）<span>必須</span></dt>
+                    <dd class="form__select form-select form__input">
+                      <select id="formChange01" onchange="viewChange1();">
+                        <option hidden>選択してください</option>
+                        <option value="short_message">ショートメッセージ（SMS）※推奨</option>
+                        <option value="mail">メール</option>
+                        <option value="tel">電話</option>
+                      </select>
+                    </dd>
+                    <div class="form__wrap-box">
+                      <dl id="form_short" class="form__wrap" style="display: none;">
+                        <dt class="form__label">携帯電話<span>必須</span></dt>
+                        <dd class="form-input form__input">
+                          <input type="text" name="form_short" id="form_short">
+                        </dd>
+                      </dl>
+                      <dl id="form_mail" class="form__wrap" style="display: none;">
+                        <dt class="form__label">メールアドレス<span>必須</span></dt>
+                        <dd class="form-input form__input">
+                          <input type="mail" name="form_mail" id="form_mail">
+                        </dd>
+                      </dl>
+                      <dl id="form_tel" class="form__wrap" style="display: none;">
+                        <dt class="form__label">電話番号<span>必須</span></dt>
+                        <dd class="form-input form__input">
+                          <input type="mail" name="form_tel" id="form_tel">
+                        </dd>
+                      </dl>
+                    </div>
+                  </dl>
+                  <dl id="form_family" class="form__wrap" style="display: none;">
+                    <dt class="form__label">ご契約者様との続柄<span>必須</span></dt>
+                    <dd class="form-input form__input">
+                      <input type="text" name="form_family" id="form_family" placeholder="母">
+                    </dd>
+                    <div class="form__wrap-box">
+                      <dl class="form__wrap">
+                        <dt class="form__label">名前<span>必須</span></dt>
+                        <dd class="form__input form-input">
+                          <p>内容確認にてお電話することがありますので、お名前をご入力ください。</p>
+                          <div class="form__input-name">
+                            <label for="last_name">姓
+                              <input type="text" id="family_name" placeholder="山田">
+                            </label>
+                            <label for="first_name">名
+                              <input type="text" id="first_name" placeholder="太郎">
+                            </label>
+                          </div>
+                        </dd>
+                      </dl>
+                      <dl class="form__wrap">
+                        <dt class="form__label">名前（フリガナ）<span>必須</span></dt>
+                        <dd class="form__input form-input">
+                          <div class="form__input-name">
+                            <label for="last_name">セイ
+                              <input type="text" id="family_name_kana" placeholder="ヤマダ">
+                            </label>
+                            <label for="first_name">メイ
+                              <input type="text" id="first_name_kana" placeholder="タロウ">
+                            </label>
+                          </div>
+                        </dd>
+                      </dl>
+                      <dl class="form__wrap">
+                        <dt class="form__label">当社からの連絡方法（ご希望）<span>必須</span></dt>
+                        <dd class="form__radio form-radio">
+                          <div class="form-radio__wrap">
+                            <label><input type="radio" name="radio" value="short"><span>ショートメッセージ（SMS）※推奨</span></label>
+                            <label><input type="radio" name="radio" value="tel"><span>電話</span></label>
+                            <label><input type="radio" name="radio" value="mail"><span>メール</span></label>
+                          </div>
+                        </dd>
+                      </dl>
+                      <dl id="form__number" class="form__wrap">
+                        <dt class="form__label">ご連絡先<span>必須</span></dt>
+                        <dd class="form-input form__input">
+                          <input type="text" name="form__number" id="form__number">
+                        </dd>
+                      </dl>
+                    </div>
+                  </dl>
+                  <dl id="form_shop" class="form__wrap" style="display: none;">
+                    <dt class="form__label">販売店様<span>必須</span></dt>
+                    <dd class="form-input form__input">
+                      <input type="text" name="form_shop" id="form_shop" placeholder="店名">
+                    </dd>
+                    <div class="form__wrap-box">
+                      <dl class="form__wrap">
+                        <dt class="form__label">名前<span>必須</span></dt>
+                        <dd class="form__input form-input">
+                          <p>内容確認にてお電話することがありますので、お名前をご入力ください。</p>
+                          <div class="form__input-name">
+                            <label for="last_name">姓
+                              <input type="text" id="family_name" placeholder="山田">
+                            </label>
+                            <label for="first_name">名
+                              <input type="text" id="first_name" placeholder="太郎">
+                            </label>
+                          </div>
+                        </dd>
+                      </dl>
+                      <dl class="form__wrap">
+                        <dt class="form__label">名前（フリガナ）<span>必須</span></dt>
+                        <dd class="form__input form-input">
+                          <div class="form__input-name">
+                            <label for="last_name">セイ
+                              <input type="text" id="family_name_kana" placeholder="ヤマダ">
+                            </label>
+                            <label for="first_name">メイ
+                              <input type="text" id="first_name_kana" placeholder="タロウ">
+                            </label>
+                          </div>
+                        </dd>
+                      </dl>
+                      <dl class="form__wrap">
+                        <dt class="form__label">当社からの連絡方法（ご希望）<span>必須</span></dt>
+                        <dd class="form__radio form-radio">
+                          <div class="form-radio__wrap">
+                            <label><input type="radio" name="radio" value="tel"><span>電話</span></label>
+                            <label><input type="radio" name="radio" value="short"><span>ショートメッセージ（SMS）※推奨</span></label>
+                            <label><input type="radio" name="radio" value="mail"><span>Eメール</span></label>
+                          </div>
+                        </dd>
+                      </dl>
+                      <dl id="form__number" class="form__wrap">
+                        <dt class="form__label">ご連絡先<span>必須</span></dt>
+                        <dd class="form-input form__input">
+                          <input type="text" name="form__number" id="form__number">
+                        </dd>
+                      </dl>
+                    </div>
+                  </dl>
+                  <dl id="form_factory" class="form__wrap" style="display: none;">
+                    <dt class="form__label">修理工場様<span>必須</span></dt>
+                    <dd class="form-input form__input">
+                      <input type="text" name="form_factory" id="form_factory" placeholder="工場名">
+                    </dd>
+                    <div class="form__wrap-box">
+                      <dl class="form__wrap">
+                        <dt class="form__label">名前<span>必須</span></dt>
+                        <dd class="form__input form-input">
+                          <p>内容確認にてお電話することがありますので、お名前をご入力ください。</p>
+                          <div class="form__input-name">
+                            <label for="last_name">姓
+                              <input type="text" id="family_name" placeholder="山田">
+                            </label>
+                            <label for="first_name">名
+                              <input type="text" id="first_name" placeholder="太郎">
+                            </label>
+                          </div>
+                        </dd>
+                      </dl>
+                      <dl class="form__wrap">
+                        <dt class="form__label">名前（フリガナ）<span>必須</span></dt>
+                        <dd class="form__input form-input">
+                          <div class="form__input-name">
+                            <label for="last_name">セイ
+                              <input type="text" id="family_name_kana" placeholder="ヤマダ">
+                            </label>
+                            <label for="first_name">メイ
+                              <input type="text" id="first_name_kana" placeholder="タロウ">
+                            </label>
+                          </div>
+                        </dd>
+                      </dl>
+                      <dl class="form__wrap">
+                        <dt class="form__label">当社からの連絡方法（ご希望）<span>必須</span></dt>
+                        <dd class="form__radio form-radio">
+                          <div class="form-radio__wrap">
+                            <label><input type="radio" name="radio" value="tel"><span>電話</span></label>
+                            <label><input type="radio" name="radio" value="short"><span>ショートメッセージ（SMS）※推奨</span></label>
+                            <label><input type="radio" name="radio" value="mail"><span>Eメール</span></label>
+                          </div>
+                        </dd>
+                      </dl>
+                      <dl id="form__number" class="form__wrap">
+                        <dt class="form__label">ご連絡先<span>必須</span></dt>
+                        <dd class="form-input form__input">
+                          <input type="text" name="form__number" id="form__number">
+                        </dd>
+                      </dl>
+                    </div>
+                  </dl>
+                  <dl id="form_other" class="form__wrap" style="display: none;">
+                    <dt class="form__label">その他<span>必須</span></dt>
+                    <dd class="form-input form__input">
+                      <input type="text" name="form_other" id="form_other" placeholder="その他">
+                    </dd>
+                    <div class="form__wrap-box">
+                      <dl class="form__wrap">
+                        <dt class="form__label">名前<span>必須</span></dt>
+                        <dd class="form__input form-input">
+                          <p>内容確認にてお電話することがありますので、お名前をご入力ください。</p>
+                          <div class="form__input-name">
+                            <label for="last_name">姓
+                              <input type="text" id="family_name" placeholder="山田">
+                            </label>
+                            <label for="first_name">名
+                              <input type="text" id="first_name" placeholder="太郎">
+                            </label>
+                          </div>
+                        </dd>
+                      </dl>
+                      <dl class="form__wrap">
+                        <dt class="form__label">名前（フリガナ）<span>必須</span></dt>
+                        <dd class="form__input form-input">
+                          <div class="form__input-name">
+                            <label for="last_name">セイ
+                              <input type="text" id="family_name_kana" placeholder="ヤマダ">
+                            </label>
+                            <label for="first_name">メイ
+                              <input type="text" id="first_name_kana" placeholder="タロウ">
+                            </label>
+                          </div>
+                        </dd>
+                      </dl>
+                      <dl class="form__wrap">
+                        <dt class="form__label">当社からの連絡方法（ご希望）<span>必須</span></dt>
+                        <dd class="form__radio form-radio">
+                          <div class="form-radio__wrap">
+                            <label><input type="radio" name="radio" value="short"><span>ショートメッセージ（SMS）※推奨</span></label>
+                            <label><input type="radio" name="radio" value="tel"><span>電話</span></label>
+                            <label><input type="radio" name="radio" value="mail"><span>メール</span></label>
+                          </div>
+                        </dd>
+                      </dl>
+                      <dl id="form__number" class="form__wrap">
+                        <dt class="form__label">ご連絡先<span>必須</span></dt>
+                        <dd class="form-input form__input">
+                          <input type="text" name="form__number" id="form__number">
+                        </dd>
+                      </dl>
+                    </div>
+                  </dl>
+                </div>
+              </dl>
+              <dl class="form__wrap">
+                <dt class="form__label">ご契約NO/ナンバープレート/車台番号<span>必須</span></dt>
+                <dd class="form__select form-select form__input">
+                  <p>いずれかを入力してください</p>
+                  <select id="formChange03" onchange="viewChange3();">
+                    <option hidden>選択してください</option>
+                    <option value="contract_number">ご契約NO</option>
+                    <option value="number_plate">ナンバープレート</option>
+                    <option value="vin">車台番号</option>
+                  </select>
+                </dd>
+                <div class="form__wrap-box">
+                  <dl id="form_contract_number" class="form__wrap" style="display: none;">
+                    <dt class="form__label">ご契約NO<span>必須</span></dt>
+                    <dd class="form-input form__input">
+                      <p>保証書右上に記載の契約NOをご入力ください</p>
+                      <input type="text" name="form_contract_number" id="form_contract_number">
+                    </dd>
+                  </dl>
+                  <dl id="form_number_plate" class="form__wrap" style="display: none;">
+                    <dt class="form__label">ナンバープレート<span>必須</span></dt>
+                    <dd class="form-input form__input">
+                      <input type="text" name="form_number_plate" id="form_number_plate">
+                    </dd>
+                  </dl>
+                  <dl id="form_vin" class="form__wrap" style="display: none;">
+                    <dt class="form__label">車台番号<span>必須</span></dt>
+                    <dd class="form-input form__input">
+                      <input type="text" name="form_vin" id="form_vin">
+                    </dd>
+                  </dl>
+                </div>
+              </dl>
+              <dl class="form__wrap">
+                <dt class="form__label">現在の走行距離<span class="any">任意</span></dt>
+                <dd class="form__input form-input">
+                  <label for="km" class="kmlabel">
+                    <input type="text" name="km" id="km"><span class="km">Km</span>
+                  </label>
+                </dd>
+              </dl>
+            </div>
+            <div class="form__content">
+              <p class="form__title">不具合情報</p>
+              <dl class="form__wrap">
+                <dt class="form__label">不具合内容①<span>必須</span></dt>
+                <dd class="form__select form-select form__input">
+                  <select>
+                    <option hidden>選択してください</option>
+                    <option value="symptoms">症状から選ぶ</option>
+                    <option value="part">部位から選ぶ</option>
+                    <option value="warning_light">警告灯から選ぶ</option>
+                  </select>
+                </dd>
+                <div class="form__wrap-box">
+                  <dl id="form_symptoms" class="form__wrap">
+                    <dt class="form__label">いつから<span>必須</span></dt>
+                    <dd class="form-input form__input">
+                      <p>明確な日付がわからない場合はおよその日付を選択してください。</p>
+                      <input type="date" name="" id="today">
+                    </dd>
+                    <div class="form__wrap-box">
+                      <dl class="form__wrap">
+                        <dt class="form__label">どのようなときに<span>必須</span></dt>
+                        <dd class="form__select form-select form__input">
+                          <select>
+                            <option hidden>選択してください</option>
+                            <option value="curves">曲がる</option>
+                            <option value="test01">test</option>
+                            <option value="test02">test02</option>
+                          </select>
+                        </dd>
+                      </dl>
+                      <dl class="form__wrap">
+                        <dt class="form__label">どうなるか<span>必須</span></dt>
+                        <dd class="form__radio form-radio">
+                          <div class="form-radio__wrap">
+                            <label><input type="radio" name="radio_symptoms" value="upright"><span>まっすぐ走らない</span></label>
+                            <label><input type="radio" name="radio_symptoms" value="heel"><span>ハンドルが傾く</span></label>
+                            <label><input type="radio" name="radio_symptoms" value="heavy"><span>ハンドルが重い/引っかかる</span></label>
+                            <label><input type="radio" name="radio_symptoms" value="return"><span>ハンドルの戻りが悪い</span></label>
+                            <label><input type="radio" name="radio_symptoms" value="lamp"><span>ウィンカー点灯不良</span></label>
+                            <label><input type="radio" name="radio_symptoms" value="symptoms_other"><span>その他症状</span></label>
+                          </div>
+                        </dd>
+                      </dl>
+                      <dl class="form__wrap u-align-start">
+                        <dt class="form__label">画像選択<span>必須</span></dt>
+                        <dd class="form__checkbox-icon form-checkbox-icon form__input">
+                          <div class="form-checkbox-icon__items">
+                            <div class="form-checkbox-icon__item">
+                              <input type="checkbox" name="check_icon01" id="check_icon01">
+                              <label for="check_icon01">
+                                <div class="form-check-icon__img">
+                                  <img src='../images/form/warning_light_yellow.png' alt='' width='' height='' loading='lazy'>
+                                </div>
+                                <span>エンジン警告灯</span>
+                              </label>
+                            </div>
+                            <div class="form-checkbox-icon__item">
+                              <input type="checkbox" name="check_icon02" id="check_icon02">
+                              <label for="check_icon02">
+                                <div class="form-check-icon__img">
+                                  <img src='../images/form/fuel_residual_yellow.png' alt='' width='' height='' loading='lazy'>
+                                </div>
+                                <span>燃料残量警告灯</span>
+                              </label>
+                            </div>
+                            <div class="form-checkbox-icon__item">
+                              <input type="checkbox" name="check_icon03" id="check_icon03">
+                              <label for="check_icon03">
+                                <div class="form-check-icon__img">
+                                  <img src='../images/form/pressure_yellow.png' alt='' width='' height='' loading='lazy'>
+                                </div>
+                                <span>タイヤ空気圧警告灯</span>
+                              </label>
+                            </div>
+                            <div class="form-checkbox-icon__item">
+                              <input type="checkbox" name="check_icon04" id="check_icon04">
+                              <label for="check_icon04">
+                                <div class="form-check-icon__img">
+                                  <img src='../images/form/slip_yellow.png' alt='' width='' height='' loading='lazy'>
+                                </div>
+                                <span>スリップ表示灯</span>
+                              </label>
+                            </div>
+                            <div class="form-checkbox-icon__item">
+                              <input type="checkbox" name="check_icon05" id="check_icon05">
+                              <label for="check_icon05">
+                                <div class="form-check-icon__img">
+                                  <img src='../images/form/abs_yellow.png' alt='' width='' height='' loading='lazy'>
+                                </div>
+                                <span>ABS警告灯</span>
+                              </label>
+                            </div>
+                            <div class="form-checkbox-icon__item">
+                              <input type="checkbox" name="check_icon06" id="check_icon06">
+                              <label for="check_icon06">
+                                <div class="form-check-icon__img">
+                                  <img src='../images/form/brake_yellow.png' alt='' width='' height='' loading='lazy'>
+                                </div>
+                                <span>ブレーキ警告灯</span>
+                              </label>
+                            </div>
+                            <div class="form-checkbox-icon__item">
+                              <input type="checkbox" name="check_icon07" id="check_icon07">
+                              <label for="check_icon07">
+                                <div class="form-check-icon__img">
+                                  <img src='../images/form/steering_yellow.png' alt='' width='' height='' loading='lazy'>
+                                </div>
+                                <span>パワーステアリング<br>警告灯</span>
+                              </label>
+                            </div>
+                            <div class="form-checkbox-icon__item">
+                              <input type="checkbox" name="check_icon08" id="check_icon08">
+                              <label for="check_icon08">
+                                <div class="form-check-icon__img">
+                                  <img src='../images/form/pcs_yellow.png' alt='' width='' height='' loading='lazy'>
+                                </div>
+                                <span>PCS警告灯</span>
+                              </label>
+                            </div>
+                            <div class="form-checkbox-icon__item">
+                              <input type="checkbox" name="check_icon09" id="check_icon09">
+                              <label for="check_icon09">
+                                <div class="form-check-icon__img">
+                                  <img src='../images/form/at_yellow.png' alt='' width='' height='' loading='lazy'>
+                                </div>
+                                <span>AT警告灯</span>
+                              </label>
+                            </div>
+                            <div class="form-checkbox-icon__item">
+                              <input type="checkbox" name="check_icon10" id="check_icon10">
+                              <label for="check_icon10">
+                                <div class="form-check-icon__img">
+                                  <img src='../images/form/steering_red.png' alt='' width='' height='' loading='lazy'>
+                                </div>
+                                <span>パワーステアリング<br>警告灯</span>
+                              </label>
+                            </div>
+                            <div class="form-checkbox-icon__item">
+                              <input type="checkbox" name="check_icon11" id="check_icon11">
+                              <label for="check_icon11">
+                                <div class="form-check-icon__img">
+                                  <img src='../images/form/hydraulics_red.png' alt='' width='' height='' loading='lazy'>
+                                </div>
+                                <span>油圧警告灯</span>
+                              </label>
+                            </div>
+                            <div class="form-checkbox-icon__item">
+                              <input type="checkbox" name="check_icon12" id="check_icon12">
+                              <label for="check_icon12">
+                                <div class="form-check-icon__img">
+                                  <img src='../images/form/brake_red.png' alt='' width='' height='' loading='lazy'>
+                                </div>
+                                <span>ブレーキ警告灯</span>
+                              </label>
+                            </div>
+                            <div class="form-checkbox-icon__item">
+                              <input type="checkbox" name="check_icon13" id="check_icon13">
+                              <label for="check_icon13">
+                                <div class="form-check-icon__img">
+                                  <img src='../images/form/brake_red.png' alt='' width='' height='' loading='lazy'>
+                                </div>
+                                <span>パーキングブレーキ<br>表示灯</span>
+                              </label>
+                            </div>
+                            <div class="form-checkbox-icon__item">
+                              <input type="checkbox" name="check_icon14" id="check_icon14">
+                              <label for="check_icon14">
+                                <div class="form-check-icon__img">
+                                  <img src='../images/form/half_opened_red.png' alt='' width='' height='' loading='lazy'>
+                                </div>
+                                <span>半ドア警告灯</span>
+                              </label>
+                            </div>
+                            <div class="form-checkbox-icon__item">
+                              <input type="checkbox" name="check_icon15" id="check_icon15">
+                              <label for="check_icon15">
+                                <div class="form-check-icon__img">
+                                  <img src='../images/form/air_bag_red.png' alt='' width='' height='' loading='lazy'>
+                                </div>
+                                <span>エアバック・<br>プリテンショナー警告灯</span>
+                              </label>
+                            </div>
+                            <div class="form-checkbox-icon__item">
+                              <input type="checkbox" name="check_icon16" id="check_icon16">
+                              <label for="check_icon16">
+                                <div class="form-check-icon__img">
+                                  <img src='../images/form/seat_belt_red.png' alt='' width='' height='' loading='lazy'>
+                                </div>
+                                <span>シートベルト非装備<br class="u-mobile">警告灯</span>
+                              </label>
+                            </div>
+                            <div class="form-checkbox-icon__item">
+                              <input type="checkbox" name="check_icon17" id="check_icon17">
+                              <label for="check_icon17">
+                                <div class="form-check-icon__img">
+                                  <img src='../images/form/master_red.png' alt='' width='' height='' loading='lazy'>
+                                </div>
+                                <span>マスターウォーニング</span>
+                              </label>
+                            </div>
+                            <div class="form-checkbox-icon__item">
+                              <input type="checkbox" name="check_icon18" id="check_icon18">
+                              <label for="check_icon18">
+                                <div class="form-check-icon__img">
+                                  <img src='../images/form/eblit_red.png' alt='' width='' height='' loading='lazy'>
+                                </div>
+                                <span>イブリットシステム異常<br>警告灯</span>
+                              </label>
+                            </div>
+                            <div class="form-checkbox-icon__item">
+                              <input type="checkbox" name="check_icon19" id="check_icon19">
+                              <label for="check_icon19">
+                                <div class="form-check-icon__img">
+                                  <img src='../images/form/battery_red.png' alt='' width='' height='' loading='lazy'>
+                                </div>
+                                <span>充電警告灯</span>
+                              </label>
+                            </div>
+                            <div class="form-checkbox-icon__item">
+                              <input type="checkbox" name="check_icon20" id="check_icon20">
+                              <label for="check_icon20">
+                                <div class="form-check-icon__img">
+                                  <img src='../images/form/water_temperature_red.png' alt='' width='' height='' loading='lazy'>
+                                </div>
+                                <span>水温警告灯</span>
+                              </label>
+                            </div>
+                            <div class="form-checkbox-icon__item">
+                              <input type="checkbox" name="check_icon21" id="check_icon21">
+                              <label for="check_icon21">
+                                <div class="form-check-icon__img">
+                                  <img src='../images/form/water_temperature_blue.png' alt='' width='' height='' loading='lazy'>
+                                </div>
+                                <span>水温警告灯<br>（青色）</span>
+                              </label>
+                            </div>
+                            <div class="form-checkbox-icon__item">
+                              <input type="checkbox" name="check_icon22" id="check_icon22">
+                              <label for="check_icon22">
+                                <div class="form-check-icon__img">
+                                  <img src='../images/form/security_red.png' alt='' width='' height='' loading='lazy'>
+                                </div>
+                                <span>セキュリティ表示灯</span>
+                              </label>
+                            </div>
+                            <div class="form-checkbox-icon__item">
+                              <input type="checkbox" name="check_icon23" id="check_icon23">
+                              <label for="check_icon23">
+                                <div class="form-check-icon__img">
+                                  <img src='../images/form/other_white.png' alt='' width='' height='' loading='lazy'>
+                                </div>
+                                <span>その他</span>
+                              </label>
+                            </div>
+                          </div>
+                          <p class="form-checkbox-icon__text">＋不具合を追加する</p>
+                        </dd>
+                      </dl>
+                    </div>
+                  </dl>
+                </div>
+              </dl>
+              <dl class="form__wrap form__wrap--textarea">
+                <dt class="form__label">備考 その他詳細<span>必須</span></dt>
+                <dd class="form__textarea form-textarea form__input">
+                  <textarea name="message" placeholder="不具合内容について詳しく教えてください。"></textarea>
+                </dd>
+              </dl>
+              <dl class="form__wrap">
+                <dt class="form__label">見積書有無<span>必須</span></dt>
+                <dd class="form__select form-select form__input">
+                  <select id="formChange05" onchange="viewChange5();">
+                    <option hidden>選択してください</option>
+                    <option value="unachieved">未取得</option>
+                    <option value="acquisition">取得済</option>
+                  </select>
+                </dd>
+                <div class="form__wrap-box">
+                  <dl id="form_quote" class="form__wrap" style="display: none;">
+                    <dt class="form__label">お見積書アップロード<span>必須</span></dt>
+                    <dd class="form-file form__file form__input">
+                      <div class="form-file__wrap">
+                        <p><input type="file" id="s_file" name="s_file"><span class="reset-file" data-file="s_file">ファイルを削除する</span></p>
+                      </div>
+                      <p class="form-file__text">＋ファイルを追加する</p>
+                    </dd>
+                  </dl>
+                </div>
+              </dl>
+              <dl class="form__wrap">
+                <dt class="form__label">その他書類アップロード<span class="any">任意</span></dt>
+                <dd class="form-file form__file form__input">
+                  <p>その他書類がある場合は添付をお願いします。</p>
+                  <div class="form-file__wrap">
+                    <p><input type="file" id="s_file" name="s_file"><span class="reset-file" data-file="s_file">ファイルを削除する</span></p>
+                  </div>
+                  <p class="form-file__mb">100 MB 以下</p>
+                  <p class="form-file__text">＋ファイルを追加する</p>
+                </dd>
+              </dl>
+            </div>
+            <div class="form__content">
+              <p class="form__title">工場情報</p>
+              <dl class="form__wrap">
+                <dt class="form__label">入庫希望工場<span>必須</span></dt>
+                <dd class="form__input form__tabs">
+                  <div class="tab">
+                    <ul class="tab__menu">
+                      <li class="tab__menu-item js-tab-menu is-active" data-number="tab01">MAPから探す</li>
+                      <li class="tab__menu-item js-tab-menu" data-number="tab02">所在地から探す</li>
+                      <li class="tab__menu-item js-tab-menu" data-number="tab03">直接入力</li>
+                    </ul>
+                    <ul class="tab__content">
+                      <li id="tab01" class="tab__content-item js-tab-content is-active">
+                        <div class="tab__content-map">
+                          <img src='../images/form/map_dummy.png' alt='map' width='' height='' loading='lazy'>
+                          <div class="tab__content-map-hukidashi">
+                            <div class='tab__content-map-hukidashi-wrap'>
+                              <p>
+                                <span class="tab__content-map-hukidashi-icon">
+                                <img src='../images/form/form__logo.png' alt='' width='' height='' loading='lazy'>
+                              </span>
+                              カープレミア本店<span class="imported">輸入車対応</span></p>
+                              <p class="tab__content-map-hukidashi-text">
+                                〒105-0001 東京都港区虎ノ門2-10-4 オークラプレステージタワー19階
+                              </p>
+                              <span class="tab__content-map-result__add">追加する</span>
+                            </div>
+                          </div>
+                        </div>
+                        <p class="tab__content-map-search">現在地から探す</p>
+                        <p class="tab__content-map-search__result">検索結果は <span>5</span>件 です</p>
+                        <ul class="tab__content-map-result__items">
+                          <li class="tab__content-map-result__item selected">
+                            <p>
+                              <span class="tab__content-map-result__icon">
+                                <img src='../images/form/form__logo.png' alt='' width='' height='' loading='lazy'>
+                              </span>
+                            カープレミア本店<span class="imported">輸入車対象</span></p>
+                            <p class="selected">
+                              第一希望に設定済み
+                              <span>取り消す</span>
+                            </p>
+                          </li>
+                          <li class="tab__content-map-result__item">
+                            <p>カープレミア渋谷</p>
+                            <span class="tab__content-map-result__add">追加する</span>
+                          </li>
+                          <li class="tab__content-map-result__item">
+                            <p>オートショップ東大和</p>
+                            <span class="tab__content-map-result__add">追加する</span>
+                          </li>
+                          <li class="tab__content-map-result__item">
+                            <p>カーショッププレミア<span class="imported">輸入車対象</span></p>
+                            <span class="tab__content-map-result__add">追加する</span>
+                          </li>
+                          <li class="tab__content-map-result__item">
+                            <p>プレミアオートショップ</p>
+                            <span class="tab__content-map-result__add">追加する</span>
+                          </li>
+                        </ul>
+                      </li>
+                      <li id="tab02" class="tab__content-item js-tab-content">
+                        <div class="tab__content-item__address">
+                          <div class="address">
+                            <span class="number">郵便番号</span>
+                            <p>
+                              <input type="text" name="" id="">-
+                              <input type="text" name="" id="">
+                            </p>
+                            <span class="search">検索</span>
+                          </div>
+                          <div class="address">
+                            <span class="number">キーワード検索</span>
+                            <p>
+                              <input type="text" name="" id="">
+                            </p>
+                            <span class="search">検索</span>
+                          </div>
+                        </div>
+                        <div class="tab__content-map" style="margin-top:23px;">
+                          <img src='../images/form/map_dummy02.png' alt='map' width='' height='' loading='lazy'>
+                        </div>
+                        <p class="tab__content-map-search__prefecture">千葉県</p>
+                        <ul class="tab__content-map-search__prefecture-lists">
+                          <li class="tab__content-map-search__prefecture-list">
+                            <p>
+                              <span>あ行</span>
+                              <span>我孫子市</span>
+                              <span>市川市</span>
+                              <span>浦安市</span>
+                            </p> 
+                          </li>
+                          <li class="tab__content-map-search__prefecture-list">
+                            <p>
+                              <span>か行</span>
+                              <span>柏市</span>
+                            </p> 
+                          </li>
+                          <li class="tab__content-map-search__prefecture-list">
+                            <p>
+                              <span>た行</span>
+                              <span>千葉市</span>
+                            </p> 
+                          </li>
+                          <li class="tab__content-map-search__prefecture-list">
+                            <p>
+                              <span>な行</span>
+                              <span>流山市</span>
+                            </p> 
+                          </li>
+                          <li class="tab__content-map-search__prefecture-list">
+                            <p>
+                              <span>は行</span>
+                              <span>船橋市</span>
+                            </p> 
+                          </li>
+                          <li class="tab__content-map-search__prefecture-list">
+                            <p>
+                              <span>ま行</span>
+                              <span>松戸市</span>
+                            </p> 
+                          </li>
+                          <li class="tab__content-map-search__prefecture-list">
+                            <p>
+                              <span>や行</span>
+                              <span>八千代市</span>
+                            </p> 
+                          </li>
+                        </ul>
+                        <p class="tab__content-map-search__result">我孫子市の工場は <span>5</span>件 です</p>
+                        <ul class="tab__content-map-result__items">
+                          <li class="tab__content-map-result__item">
+                            <p>
+                              <span class="tab__content-map-result__icon">
+                                <img src='../images/form/form__logo.png' alt='' width='' height='' loading='lazy'>
+                              </span>
+                              カープレミア本店<span class="imported">輸入車対象</span></p>
+                              <p class="selected">
+                                第一希望に設定済み
+                                <span>取り消す</span>
+                              </p>
+                          </li>
+                          <li class="tab__content-map-result__item">
+                            <p>カープレミア渋谷</p>
+                            <p class="selected">
+                              第二希望に設定済み
+                              <span>取り消す</span>
+                            </p>
+                          </li>
+                          <li class="tab__content-map-result__item">
+                            <p>オートショップ東大和</p>
+                            <span class="tab__content-map-result__add">追加する</span>
+                          </li>
+                          <li class="tab__content-map-result__item">
+                            <p>カーショッププレミア<span class="imported">輸入車対象</span></p>
+                            <span class="tab__content-map-result__add">追加する</span>
+                          </li>
+                          <li class="tab__content-map-result__item">
+                            <p>プレミアオートショップ</p>
+                            <span class="tab__content-map-result__add">追加する</span>
+                          </li>
+                        </ul>
+                      </li>
+                      <li id="tab03" class="tab__content-item js-tab-content">
+                        <div class="tab__content-item__content">
+                          <dl class="tab__content-item__wrap">
+                            <dt class="tab__content-item__label">ご希望工場（第一希望）<span>必須</span></dt>
+                            <dd class="tab__content-item__input">
+                              <input type="text" name="" id="">
+                            </dd>
+                          </dl>
+                          <dl class="tab__content-item__wrap">
+                            <dt class="tab__content-item__label">ご希望工場（第二希望）</dt>
+                            <dd class="tab__content-item__input">
+                              <input type="text" name="" id="">
+                            </dd>
+                          </dl>
+                        </div>
+                        <p class="tab__content-item__info">※ご希望に沿えない場合もございますのであらかじめご了承ください。</p>
+                      </li>
+                    </ul>
+                  </div>
+                </dd>
+              </dl>
+              <dl class="form__wrap">
+                <dt class="form__label">お車の所在地<span>必須</span></dt>
+                <dd class="form__select form-select form__input">
+                  <select>
+                    <option hidden>選択してください</option>
+                    <option value="warranty">保証書記載のご住所近辺</option>
+                    <option value="repair">修理工場</option>
+                    <option value="purchased">お車購入店舗</option>
+                    <option value="other_1">その他</option>
+                  </select>
+                </dd>
+              </dl>
+              <dl class="form__wrap">
+                <dt class="form__label">走行の可否<span>必須</span></dt>
+                <dd class="form__radio form-radio">
+                  <div class="form-radio__wrap">
+                    <label><input type="radio" name="radio" value="can"><span>走行できる</span></label>
+                    <label><input type="radio" name="radio" value="cannot"><span>走行できない</span></label>
+                    <label><input type="radio" name="radio" value="unknown"><span>分からない</span></label>
+                  </div>
+                </dd>
+              </dl>
+            </div>
+            <div class="form__content">
+              <p class="form__title">同意事項</p>
+              <dl class="form__wrap">
+                <dt class="form__label">代車について<span>必須</span></dt>
+                <dd class="form__checkbox form-checkbox form__input">
+                  <label><input type="checkbox" name="check01" value="check01"><span>代車費用は保証対象とならないことを確認しました</span></label>
+                </dd>
+              </dl>
+              <dl class="form__wrap">
+                <dt class="form__label">点検診断費用について<span>必須</span></dt>
+                <dd class="form__checkbox form-checkbox form__input">
+                  <label><input type="checkbox" name="check02" value="check02"><span>故障の点検診断費用は加入商品によって有料となることを確認しました</span></label>
+                </dd>
+              </dl>
+              <dl class="form__wrap">
+                <dt class="form__label">使用部品について<span>必須</span></dt>
+                <dd class="form__checkbox form-checkbox form__input">
+                  <label><input type="checkbox" name="check03" value="check03"><span>リサイクル部品、再生部品、社外新品部品を優先して使用することを<br class="u-desktop">確認しました</span></label>
+                </dd>
+              </dl>
+              <dl class="form__wrap">
+                <dt class="form__label">保証ご利用時のご注意事項<span>必須</span></dt>
+                <dd class="form__checkbox form-checkbox form__input">
+                  <div class="form__checkbox-box">
+                    <p>１．弊社の保証で対応できるのは保証対象となった場合の部品代と工賃となります。<br>
+                      ２．保証修理の際は、リサイクル部品⇒再生部品（リビルト部品）⇒社外新品⇒純正新品の優先順位で部品を使用しての修理となります。<br>
+                      ３．保証対象となった場合、保証事務局より部品をお送り致しますので、審査結果の連絡があるまでは部品の発注、作業の着工はお待ちください。<br>
+                      ４．保証内容や作業内容によっては工場を変更していただく場合がありますのでご了承ください。</p>
+                  </div>
+                  <label class="agreement"><input type="checkbox" name="check04" value="check04"><span>同意する</span></label>
+                </dd>
+              </dl>
+              <dl class="form__wrap">
+                <dt class="form__label">利用規約<span>必須</span></dt>
+                <dd class="form__checkbox form-checkbox form__input">
+                  <div class="form__checkbox-box">
+                    <p>
+                      この利用規約（以下，「本規約」といいます。）は，プレミアグループ株式会社とプレミアグループ株式会社の有価証券報告書等に記載するプレミアグループ株式会社の連結子会社および持分法適用関連会社（連結子会社の子会社およびプレミアグループ株式会社の連結子会社の子会社を含む）プレミアグループ各企業。（以下，「当社」といいます。）がこのウェブサイト上で提供するサービス（以下，「本サービス」といいます。）の利用条件を定めるものです。情報を登録される皆さま（以下，「ユーザー」といいます。）には，本規約に従って，本サービスをご利用いただきます。<br><br>
+                      第1条（適用）<br>
+                      本規約は，ユーザーと当社との間の本サービスの利用に関わる一切の関係に適用されるものとします。<br>
+                      当社は本サービスに関し，本規約のほか，ご利用にあたってのルール等，各種の定め（以下，「個別規定」といいます。）をすることがあります。これら個別規定はその名称のいかんに関わらず，本規約の一部を構成するものとします。<br><br>
+                      第2条（利用）<br>
+                      本サービスにおいては，ユーザーが本規約に同意の上，本サービスを利用するものとします。<br>
+                      当社は，ユーザーに以下の事由があると判断した場合，利用を拒否することがあり，その理由については一切の開示義務を負わないものとします。<br>
+                      ・情報の登録に際して虚偽の内容を登録した場合<br>
+                      ・本規約に違反したことがある者の利用である場合<br>
+                      ・その他，当社が利用を相当でないと判断した場合<br><br>
+                      第3条（禁止事項）<br>
+                      ユーザーは，本サービスの利用にあたり，以下の行為をしてはなりません。<br>
+                      ・法令または公序良俗に違反する行為<br>
+                      ・犯罪行為に関連する行為<br>
+                      ・本サービスの内容等，本サービスに含まれる著作権，商標権ほか知的財産権を侵害する行為<br>
+                      ・当社，ほかのユーザー，またはその他第三者のサーバーまたはネットワークの機能を破壊したり，妨害したりする行為<br>
+                      ・本サービスによって得られた情報を商業的に利用する行為<br>
+                      ・当社のサービスの運営を妨害するおそれのある行為<br>
+                      ・不正アクセスをし，またはこれを試みる行為<br>
+                      ・他のユーザーに関する個人情報等を収集または蓄積する行為<br>
+                      ・不正な目的を持って本サービスを利用する行為<br>
+                      ・本サービスの他のユーザーまたはその他の第三者に不利益，損害，不快感を与える行為<br>
+                      ・他のユーザーに成りすます行為<br>
+                      ・当社が許諾しない本サービス上での宣伝，広告，勧誘，または営業行為<br>
+                      ・当社のサービスに関連して，反社会的勢力に対して直接または間接に利益を供与する行為<br>
+                      ・その他，当社が不適切と判断する行為<br><br>
+                      第4条（本サービスの提供の停止等）<br>
+                      当社は，以下のいずれかの事由があると判断した場合，ユーザーに事前に通知することなく本サービスの全部または一部の提供を停止または中断することができるものとします。<br>
+                      ・本サービスにかかるコンピュータシステムの保守点検または更新を行う場合<br>
+                      ・地震，落雷，火災，停電または天災などの不可抗力により，本サービスの提供が困難となった場合<br>
+                      ・コンピュータまたは通信回線等が事故により停止した場合<br>
+                      ・その他，当社が本サービスの提供が困難と判断した場合<br>
+                      また、当社は，本サービスの提供の停止または中断により，ユーザーまたは第三者が被ったいかなる不利益または損害についても，一切の責任を負わないものとします。<br><br>
+                      第5条（利用制限および登録抹消）<br>
+                      当社は，ユーザーが以下のいずれかに該当する場合には，事前の通知なく，ユーザーに対して，本サービスの全部もしくは一部の利用を制限し，またはユーザーとしての登録を抹消することができるものとします。<br>
+                      ・本規約のいずれかの条項に違反した場合<br>
+                      ・登録事項に虚偽の事実があることが判明した場合<br>
+                      ・料金等の支払債務の不履行があった場合<br>
+                      ・当社からの連絡に対し，一定期間返答がない場合<br>
+                      ・本サービスについて，最終の利用から一定期間利用がない場合<br>
+                      ・その他，当社が本サービスの利用を適当でないと判断した場合<br>
+                      また、当社は，本条に基づき当社が行った行為によりユーザーに生じた損害について，一切の責任を負いません。<br><br>
+                      第6条（保証の否認および免責事項）<br>
+                      当社は，本サービスに事実上または法律上の瑕疵（安全性，信頼性，正確性，完全性，有効性，特定の目的への適合性，セキュリティなどに関する欠陥，エラーやバグ，権利侵害などを含みます。）がないことを明示的にも黙示的にも保証しておりません。<br>
+                      また、当社は，本サービスに起因してユーザーに生じたあらゆる損害について一切の責任を負いません。ただし，本サービスに関する当社とユーザーとの間の契約（本規約を含みます。）が消費者契約法に定める消費者契約となる場合，この免責規定は適用されません。<br>
+                      上記ただし書に定める場合であっても，当社は，当社の過失（重過失を除きます。）による債務不履行または不法行為によりユーザーに生じた損害のうち特別な事情から生じた損害（当社またはユーザーが損害発生につき予見し，または予見し得た場合を含みます。）について一切の責任を負いません。また，当社の過失（重過失を除きます。）による債務不履行または不法行為によりユーザーに生じた損害の賠償は，ユーザーから当該損害が発生した月に受領した利用料の額を上限とします。<br>
+                      当社は，本サービスに関して，ユーザーと他のユーザーまたは第三者との間において生じた取引，連絡または紛争等について一切責任を負いません。<br><br>
+                      第7条（サービス内容の変更等）<br>
+                      当社は，ユーザーに通知することなく，本サービスの内容を変更しまたは本サービスの提供を中止することができるものとし，これによってユーザーに生じた損害について一切の責任を負いません。<br><br>
+                      第8条（利用規約の変更）<br>
+                      当社は，必要と判断した場合には，ユーザーに通知することなくいつでも本規約を変更することができるものとします。なお，本規約の変更後，本サービスの利用を開始した場合には，当該ユーザーは変更後の規約に同意したものとみなします。<br><br>
+                      第9条（通知または連絡）<br>
+                      ユーザーと当社との間の通知または連絡は，当社の定める方法によって行うものとします。当社は，ユーザーから当社が別途定める方式に従った変更届け出がない限り，現在登録されている連絡先が有効なものとみなして当該連絡先へ通知または連絡を行い，これらは,発信時にユーザーへ到達したものとみなします。<br><br>
+                      第10条（権利義務の譲渡の禁止）<br>
+                      ユーザーは，当社の書面による事前の承諾なく，利用契約上の地位または本規約に基づく権利もしくは義務を第三者に譲渡し，または担保に供することはできません。<br><br>
+                      第11条（準拠法・裁判管轄）<br>
+                      本規約の解釈にあたっては，日本法を準拠法とします。<br>
+                      本サービスに関して紛争が生じた場合には，当社の本店所在地を管轄する裁判所を専属的合意管轄とします。
+                    </p>
+                  </div>
+                  <label class="agreement"><input type="checkbox" name="check04" value="check04"><span>同意する</span></label>
+                </dd>
+              </dl>
+              <dl class="form__wrap">
+                <dt class="form__label">個人情報の取り扱い<span>必須</span></dt>
+                <dd class="form__checkbox form-checkbox form__input">
+                  <div class="form__checkbox-box">
+                    <p>
+                      (1)プレミアワランティサービス株式会社（以下、「会社」といいます。）は、ご入力いただいた情報を、お問合せいただいた事項へのご回答、ご連絡等のために利用いたします。また、必要に応じてお客様の本人確認のために利用致します。<br>
+                      (2)利用目的の達成に必要な範囲内で、個人情報の取扱い業務の一部または全部を第三者に委託することがあります。委託する場合は、当該業務の委託先に対し、業務の遂行に必要な範囲で個人情報の取扱いを委託いたします。<br>
+                      (3)会社は、法令等による場合を除き、お客様の同意のなく第三者に個人情報を提供いたしません。<br>
+                      (4)会社は、会社が保有している個人情報をお客様の請求に基づき利用目的の通知、開示、訂正、追加又は削除、利用の停止、消去、第三者提供の停止、第三者提供記録の開示に対応いたします。<br>
+                      (5)このフォームを通じたお客様による個人情報のご提供は任意ですが、必要な情報をご提供いただけない場合は、お客様にお問合せいただいた事項への回答が受けられない場合があります。<br>
+                      (6)会社は、お客様から同意を得たうえで提供いただいた個人情報を利用している場合であっても、お客様からの利用停止の申し出があった場合には、以降の利用を停止いたします。<br>
+                      (7)個人情報に関するお問合せは下記までお願いいたします。<br>
+                      お客様相談室又は個人情報保護管理者（プレミアグループ個人情報保護委員会構成員）<br>
+                      〒105-0001 東京都港区虎ノ門二丁目10番4号 オークラプレステージタワー<br>
+                      電話番号 03-6842-3732<br>
+                    </p>
+                  </div>
+                  <label class="agreement"><input type="checkbox" name="check05" value="check05"><span>同意する</span></label>
+                </dd>
+              </dl>
+            </div>
+            <div class="form__content">
+              <p class="form__title">連絡事項</p>
+              <dl class="form__wrap form__wrap--textarea">
+                <dt class="form__label">その他連絡事項<span class="any">任意</span></dt>
+                <dd class="form__textarea form-textarea form__input">
+                  <textarea name="message" placeholder="（例）走行不可能なため、現在ロードサービスを手配し一時預かり中です。"></textarea>
+                </dd>
+              </dl>
+            </div>
+            <div class="form__submit form-submit">
+              <input type="submit" value="送信">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+</body>
+</html>
+
+<!-- <div class="form__content">
+  <p class="form__title">不具合情報</p>
+  <dl class="form__wrap">
+    <dt class="form__label">不具合内容①<span>必須</span></dt>
+    <dd class="form__select form-select form__input">
+      <select>
+        <option hidden>選択してください</option>
+        <option value="symptoms">症状から選ぶ</option>
+        <option value="part">部位から選ぶ</option>
+        <option value="warning_light">警告灯から選ぶ</option>
+      </select>
+    </dd>
+  </dl>
+  <dl class="form__wrap">
+    <dt class="form__label">申請者様<span>必須</span></dt>
+    <dd class="form__select form-select form__input">
+      <select>
+        <option hidden>選択してください</option>
+        <option value="me">ご契約者様ご本人</option>
+        <option value="family">契約者ご家族様</option>
+        <option value="shop">販売店様</option>
+        <option value="factory">修理工場様</option>
+        <option value="other">その他</option>
+      </select>
+    </dd>
+  </dl>
+  <dl class="form__wrap">
+    <dt class="form__label">ご契約NO/ナンバープレート/車台番号<span>必須</span></dt>
+    <dd class="form__select form-select form__input">
+      <p>いずれかを入力してください</p>
+      <select>
+        <option hidden>選択してください</option>
+        <option value="contract_number">ご契約NO</option>
+        <option value="number_plate">ナンバープレート</option>
+        <option value="vin">車台番号</option>
+      </select>
+    </dd>
+  </dl>
+  <dl class="form__wrap">
+    <dt class="form__label">現在の走行距離<span class="any">必須</span></dt>
+    <dd class="form__input form-input">
+      <label for="km" class="kmlabel">
+        <input type="text" name="km" id="km"><span class="km">Km</span>
+      </label>
+    </dd>
+  </dl>
+  <dl class="form__wrap">
+    <dt class="form__label">カテゴリ</dt>
+    <dd class="form__radio form-radio">
+      <label><input type="radio" name="category" value="ホームページ制作"><span>ホームページ制作</span></label>
+      <label><input type="radio" name="category" value="SNS運用"><span>SNS運用</span></label>
+      <label><input type="radio" name="category" value="その他"><span>その他</span></label>
+    </dd>
+  </dl>
+  <dl class="form__wrap">
+    <dt class="form__label">お持ちのSNS</dt>
+    <dd class="form__checkbox form-checkbox form__input">
+      <label><input type="checkbox" name="sns" value="Twitter"><span>Twitter</span></label>
+      <label><input type="checkbox" name="sns" value="Instagram"><span>Instagram</span></label>
+      <label><input type="checkbox" name="sns" value="Facebook"><span>Facebook</span></label>
+      <label><input type="checkbox" name="sns" value="YouTube"><span>YouTube</span></label>
+      <label><input type="checkbox" name="sns" value="その他"><span>その他</span></label>
+    </dd>
+  </dl>
+  <dl class="form__wrap form__wrap--textarea">
+    <dt class="form__label">お問い合わせ内容<span>必須</span></dt>
+    <dd class="form__textarea form-textarea">
+      <textarea name="message"></textarea>
+    </dd>
+  </dl>
+</div> -->

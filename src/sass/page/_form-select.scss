@@ -1,0 +1,37 @@
+@use "global" as *;
+
+.form-select select {
+    color:$black;
+    padding:prem(11) prem(16);
+    max-width: prem(307);
+    margin-right: auto;
+    width: 100%;
+    font-size: prem(15);
+    line-height: 1;
+    border-radius: 0;
+    border: prem(1) solid $gray;
+    background-image: url(../images/common/angle_bottom_bk.png);
+    background-repeat: no-repeat;
+    background-size: prem(10);
+    background-position: right prem(13.2) top prem(17.6);
+    appearance: none;
+    cursor: pointer;
+}
+
+.form-select select option {
+    background-color: $white;
+}
+
+.form-select select option:checked {
+    background-color: $white;
+}
+
+.form-select select::-ms-expand {
+    display: none;
+}
+
+.form-select select:focus {
+    border: prem(1.5) solid $red;
+    box-shadow: none;
+    outline: none;
+}

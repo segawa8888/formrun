@@ -1,0 +1,25 @@
+@use "global" as *;
+
+.form-input input {
+	padding: prem(11) prem(16);
+    max-width: prem(307);
+	width: 100%;
+	font-size: prem(16);
+	line-height: 1;
+	border-radius: prem(5);
+	border: prem(1) solid $gray;
+	appearance: none;
+	background-color: transparent;
+	background-image: none;
+}
+
+.form-input input:focus {
+	border: prem(1.5) solid $red;
+	box-shadow: none;
+	outline: none;
+}
+
+.form-input input::placeholder {
+    font-size: prem(16);
+    color: $deep-gray;
+}

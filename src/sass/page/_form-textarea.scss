@@ -1,0 +1,23 @@
+@use "global" as *;
+
+.form-textarea {
+    max-width: prem(560);
+}
+
+.form-textarea textarea {
+    padding: prem(15);
+    width: 100%;
+    height: prem(142);
+    font-size: prem(15);
+    border-radius: 0;
+    border: prem(1) solid $gray;
+    appearance: none;
+    background-color: transparent;
+    background-image: none;
+}
+
+.form-textarea textarea:focus {
+    border: prem(1) solid $red;
+    box-shadow: none;
+    outline: none;
+}

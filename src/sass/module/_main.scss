@@ -1,0 +1,7 @@
+@use "global" as *;
+
+.main {
+    background-color: $light-gray;
+    padding-top: prem(50);
+    padding-bottom: prem(85);
+}

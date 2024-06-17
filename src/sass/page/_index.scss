@@ -1,0 +1,107 @@
+@use "global" as *;
+
+.index__cards {
+    @include mq(md) {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: prem(37);
+        grid-template-rows: repeat(2,1fr);
+        row-gap: prem(36);
+    }
+    margin-top: prem(77);
+}
+
+.index__card:nth-child(n+2) {
+    margin-top: prem(30);
+    @include mq(md) {
+        margin-top: initial;
+    }
+}
+
+.index__card a {
+    background-color: $white;
+    box-shadow: 0px prem(3) prem(6) 0px rgba(0, 0, 0, 0.1);
+    border-radius: prem(10);
+    height: prem(255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:prem(30);
+    text-align: center;
+    transition: all  0.3s ease;
+    @include mq(md) {
+        padding: initial;
+        text-align: initial;
+    }
+
+    svg {
+        fill:#e60012;
+    }
+
+    &:hover {
+        background-color: #A5000D;
+        color:$white;
+
+        svg {
+            fill:$white;
+        }
+    }
+}
+
+.index__card-content {
+    @include mq(md) {
+        display: flex;
+        justify-content: center;
+        gap:0 prem(63);
+        align-items: center;
+    }
+}
+
+.index__card-icon {
+    max-width: prem(60);
+    margin-left: auto;
+    margin-right: auto;
+    @include mq(md) {
+        margin-left: initial;
+    }
+}
+
+.index__card-wrap {
+    @include mq(md) {
+        max-width: prem(187);
+    }
+}
+
+.index__card-title {
+    font-size: prem(20);
+    font-weight: $bold;
+    line-height: calc(25/20);
+    margin-top: prem(20);
+    @include mq(md) {
+        margin-top: initial;
+    }
+}
+
+.index__card-text {
+    font-size: prem(14);
+    margin-top: prem(22);
+    line-height: calc(19/14);
+}
+
+.index__btn {
+    margin-top: prem(63);
+    display: block;
+    text-align: center;
+    border-radius: prem(28);
+    border: prem(1) solid $red;
+    background-color: $white;
+    padding:prem(19) 0;
+    font-size: prem(16);
+    font-weight: $semibold;
+    box-shadow: 0px prem(3) prem(6) 0px rgba(0, 0, 0, 0.1);
+    transition: all  0.3s ease;
+    &:hover {
+        background-color: #A5000D;
+        color:$white;
+    }
+}

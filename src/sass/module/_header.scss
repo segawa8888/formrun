@@ -1,0 +1,11 @@
+@use "global" as *;
+
+.header {
+    padding:prem(19) prem(21);
+    background-color: $white;
+    box-shadow: 0px prem(3) prem(6) 0px rgba(0, 0, 0, 0.1);
+}
+
+.header__logo {
+    max-width: prem(143);
+}

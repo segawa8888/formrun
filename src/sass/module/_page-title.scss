@@ -1,0 +1,7 @@
+@use "global" as *;
+
+.page-title {
+    font-size: prem(30);
+    font-weight: $bold;
+    text-align: center;
+}

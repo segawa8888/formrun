@@ -1,0 +1,161 @@
+@use "global" as *;
+
+.form__wrapper {
+    margin-top: prem(52);
+}
+
+.form__content {
+    border-radius: prem(10);
+    box-shadow: 0px prem(3) prem(6) 0px rgba(0, 0, 0, 0.1);
+    background-color: $white;
+}
+
+.form__content:nth-child(n+2) {
+    margin-top: prem(45);
+}
+
+.form__title {
+    font-size: prem(25);
+    font-weight: $bold;
+    padding-top: prem(37);
+    padding-left: prem(26);
+    padding-bottom: prem(30);
+    border-bottom: prem(1) solid $gray;
+}
+
+.form__wrap {
+    border-bottom: prem(1) solid $gray;
+    margin-left: prem(22.5);
+    margin-right: prem(18.5);
+    padding-top: prem(33);
+    padding-bottom: prem(33);
+    @include mq(md){
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap:wrap;
+    }
+}
+
+.form__wrap-box {
+    width: 100%;
+}
+
+.form__wrap-box .form__wrap {
+    flex-wrap: wrap;
+    margin: 0;
+    border-bottom:none;
+    padding-bottom: initial;
+}
+
+.form__label {
+    font-size: prem(14);
+    @include mq(md) {
+        font-size: prem(16);
+    }
+}
+
+.form__label span {
+    margin-left: prem(11);
+    padding: prem(4) prem(6) prem(5) prem(6);
+    display: inline-block;
+    font-size: prem(12);
+    font-weight: $medium;
+    color: $light-red;
+    background-color: $pink;
+    border: prem(1) solid $light-red;
+    border-radius: prem(3);
+}
+
+.form__label .any {
+    border: prem(1) solid $deep-gray;
+    color: $deep-gray;
+    background-color: #E6E6E6;
+}
+
+.form__input {
+    max-width: prem(560);
+    width: 100%;
+    margin-top: prem(10);
+    @include mq(md) {
+        margin-top: initial;
+    }
+}
+
+.form__input p {
+    margin-top: prem(10);
+    font-size: prem(12);
+    color: $light-black;
+    @include mq(md) {
+        font-size: prem(14);
+        margin-top: initial;
+    }
+}
+
+.kmlabel {
+    display: flex;
+    align-items: flex-end;
+}
+
+.form__input .km {
+    margin-left: prem(5);
+}
+
+.form__input,
+.form__textarea {
+    flex-grow: 1;
+}
+
+.form__submit {
+    margin-top: prem(52);
+    text-align: center;
+}
+
+.form__input-name {
+    display: flex;
+    align-items: center;
+    gap:0 prem(18);
+    margin-top: prem(10);
+}
+
+.form__input-name label {
+    font-size: prem(12);
+    display: flex;
+    align-items: center;
+    gap:0 prem(9);
+    @include mq(md) {
+        font-size: prem(14);
+    }
+}
+
+.form__input-name input {
+    max-width: prem(101);
+}
+
+.form__select p {
+    margin-bottom: prem(9);
+}
+
+.form__radio {
+    max-width: prem(560);
+    width: 100%;
+    margin-top: prem(10);
+    @include mq(md) {
+        margin-top: initial;
+    }
+}
+
+.form__wrap.u-align-start {
+    align-items: flex-start;
+}
+
+
+input[type="date"] {
+    margin-top: prem(10);
+    color: $black;
+    appearance: none;
+}
+
+input[type="date"]::-webkit-date-and-time-value {
+    text-align: left;
+  }

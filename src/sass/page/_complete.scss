@@ -1,0 +1,53 @@
+@use "global" as *;
+
+.complete {
+    margin-top: prem(58);
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.complete__wrapper {
+    max-width: prem(658.57);
+    padding-left: prem(20);
+    padding-right: prem(20);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.complete__logo {
+    max-width: prem(75);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.complete__title {
+    margin-top: prem(23);
+    font-size: prem(30);
+    font-weight: $bold;
+}
+
+.complete__text {
+    margin-top: prem(40.5);
+    padding-top: prem(23.5);
+    border-top: prem(1) solid $gray;
+    text-align: center;
+    font-size: prem(14);
+    line-height: calc(19/14);
+}
+
+.complete__btn {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    padding:prem(11.5) prem(29);
+    border-radius: prem(94);
+    font-size: prem(16);
+    font-weight: $medium;
+    margin-top: prem(44);
+    background-color: $white;
+    box-shadow: 0px prem(3) prem(6) 0px rgba(0, 0, 0, 0.1);
+}
+

@@ -1,0 +1,89 @@
+@use "global" as *;
+
+.form-checkbox {
+    max-width: prem(560);
+    width: 100%;
+}
+
+.form-checkbox label {
+    display: block;
+    @include mq(md){
+        display: inline-block;
+    }
+}
+
+.form-checkbox label:not(:first-of-type) {
+    margin-top: prem(10);
+    @include mq(md){
+        margin-top: 0;
+        margin-left: prem(20);
+    }
+}
+
+.form-checkbox input {
+    display: none;
+}
+
+.form-checkbox input + span {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 0 0 prem(40);
+    position: relative;
+    font-size: prem(16);
+    line-height: calc(22/16);
+}
+
+.form-checkbox input + span::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    border: prem(1) solid #ccc;
+    display: block;
+    width: prem(26);
+    height: prem(26);
+    border-radius: prem(3);
+}
+
+.form-checkbox input + span::after {
+    content: "";
+    margin-top: prem(-2);
+    margin-left: prem(4.5);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%) rotate(-45deg);
+    display: block;
+    width: prem(15);
+    height: prem(9);
+    border-bottom: prem(3) solid $white;
+    border-left: prem(3) solid $white;
+    transition:  .3s;
+    opacity: 0;
+    border-radius: prem(3);
+}
+
+.form-checkbox input:checked + span:before {
+    background-color: $red;
+}
+
+.form-checkbox input:checked + span::after {
+    opacity: 1;
+}
+
+.form__checkbox-box {
+    padding:prem(17);
+    border: prem(1) solid $gray;
+    width: 100%;
+    max-height: prem(209);
+    overflow-y: scroll;
+    p {
+        font-size: prem(14);
+        line-height: calc(23/14);
+    }
+}
+
+.agreement {
+    margin-top: prem(13);
+}

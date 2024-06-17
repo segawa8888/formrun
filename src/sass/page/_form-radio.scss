@@ -1,0 +1,71 @@
+@use "global" as *;
+
+.form-radio__wrap {
+    display: flex;
+    gap:prem(12);
+    flex-wrap:wrap;
+}
+
+.form-radio label {
+    display: block;
+    display: inline-block;
+    padding:prem(9) prem(12);
+    border:prem(1) solid $gray;
+    background-color: $light-gray;
+    border-radius: prem(5);
+}
+
+.form-radio input {
+    display: none;
+}
+
+.form-radio input + span {
+    padding-left: prem(30);
+    position: relative;
+    display: block;
+    font-size: prem(12);
+    line-height: 1;
+    cursor: pointer;
+    @include mq(md){
+        display: inline-block;
+        font-size: prem(15);
+    }
+}
+
+.form-radio input + span::before {
+    content: "";
+    width: prem(21);
+    height: prem(21);
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background: #fff;
+    border: prem(1) solid $gray;
+    border-radius: 50%;
+}
+
+.form-radio input + span::after {
+    content: "";
+    padding: prem(2);
+    width: prem(13);
+    height: prem(13);
+    position: absolute;
+    top: 50%;
+    left: prem(4);
+    transform: translateY(-50%);
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background: $red;
+    opacity: 0;
+    transition: .3s;
+}
+
+.form-radio input:checked + span::before {
+    border:prem(1) solid $red;
+}
+
+.form-radio input:checked + span::after {
+    opacity: 1;
+}

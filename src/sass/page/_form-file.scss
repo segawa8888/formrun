@@ -1,0 +1,63 @@
+@use "global" as *;
+
+.form-file__wrap {
+    margin-top: prem(27);
+}
+
+.form-file__wrap p {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: prem(31);
+    padding-bottom: prem(28);
+}
+
+.form-file__wrap p input {
+    max-width: prem(180);
+    width: 100%;
+    @include mq(md) {
+        max-width: initial;
+    }
+}
+
+.form-file__wrap p:last-child {
+    border-top: prem(1) solid $gray;
+}
+
+.form__wrap:last-child .form-file__wrap {
+    margin-top: initial;
+}
+
+.form__wrap:last-child .form-file__wrap p {
+    border-top: none;
+    border-bottom:none;
+    padding-top:prem(17);
+    padding-bottom: initial;
+}
+
+.form-file__wrap .reset-file {
+    text-decoration: underline;
+    font-size: prem(10);
+    max-width: prem(100);
+    width: 100%;
+    @include mq(md) {
+        font-size: prem(14);
+        padding-right:prem(17);
+    }
+}
+
+.form-file
+.form-file__mb {
+    font-size: prem(14);
+    margin-top: prem(9);
+    color:$light-black;
+}
+
+.form-file
+.form-file__text {
+    font-size: prem(14);
+    color: $blue;
+    text-decoration: underline;
+    margin-top: prem(27);
+    cursor: pointer;
+}
